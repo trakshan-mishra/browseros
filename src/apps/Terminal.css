@@ -1,0 +1,29 @@
+.terminal {
+  height: 100%; background: #0d0d1a;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 13px; line-height: 1.6; color: #e0e0e8;
+  cursor: text;
+}
+.terminal-scroll {
+  padding: 12px 14px; height: 100%; overflow-y: auto;
+}
+.terminal-line { white-space: pre-wrap; word-break: break-all; }
+.terminal-input-line { color: #a0a0b8; }
+.terminal-output { color: #e0e0e8; }
+.terminal-error { color: var(--red); }
+.terminal-success { color: var(--green); }
+.terminal-info { color: var(--teal); }
+.terminal-matrix { color: #00ff41; font-size: 11px; letter-spacing: 1px; opacity: 0.8; }
+.terminal-prompt {
+  display: flex; align-items: center;
+}
+.terminal-prompt-cwd {
+  color: var(--accent); font-weight: 600;
+}
+.terminal-prompt-symbol { color: var(--green); }
+.terminal-input {
+  flex: 1; background: none; border: none;
+  color: #e0e0e8; font-family: inherit; font-size: inherit;
+  caret-color: var(--green);
+}
+.terminal-input:focus { outline: none; }

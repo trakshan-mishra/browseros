@@ -1,0 +1,66 @@
+.window {
+  position: fixed;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  background: var(--window-bg);
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.2);
+  animation: windowOpen 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex; flex-direction: column;
+}
+.window-active {
+  box-shadow: 0 16px 64px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.3);
+  border-color: rgba(255,255,255,0.12);
+}
+.window-inactive {
+  opacity: 0.92;
+}
+.window-maximized {
+  border-radius: 0 !important;
+  border: none !important;
+}
+.window-titlebar {
+  height: 38px; min-height: 38px;
+  background: var(--window-titlebar);
+  display: flex; align-items: center;
+  padding: 0 14px;
+  cursor: default;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  -webkit-app-region: drag;
+}
+.window-traffic {
+  display: flex; gap: 7px; align-items: center;
+  -webkit-app-region: no-drag;
+}
+.traffic-btn {
+  width: 13px; height: 13px; border-radius: 50%;
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0; transition: var(--transition);
+}
+.traffic-btn svg { opacity: 0; transition: opacity 0.15s; }
+.window-titlebar:hover .traffic-btn svg { opacity: 1; }
+.traffic-close { background: var(--red); color: #4a0000; }
+.traffic-minimize { background: var(--yellow); color: #4a3800; }
+.traffic-maximize { background: var(--green); color: #003a10; }
+.traffic-close:hover { background: #ff6259; }
+.traffic-minimize:hover { background: #ffe040; }
+.traffic-maximize:hover { background: #4ae05e; }
+
+.window-title {
+  flex: 1; text-align: center; font-size: 13px;
+  font-weight: 500; color: var(--text-secondary);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.window-titlebar-spacer { width: 62px; }
+
+.window-content {
+  flex: 1; overflow: auto;
+  position: relative;
+}
+.window-resize-handle {
+  position: absolute; bottom: 0; right: 0;
+  width: 16px; height: 16px;
+  cursor: nwse-resize; z-index: 10;
+}
