@@ -155,7 +155,7 @@ http://localhost:5173
 git clone -b nexusos-v2 https://github.com/trakshan-mishra/browseros.git && \
 cd browseros && \
 npm install && \
-node cloud-server.js
+npm run dev
 ```
 
 In another terminal:
