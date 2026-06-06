@@ -1,0 +1,80 @@
+.desktop {
+  position: fixed; inset: 0;
+  z-index: var(--z-desktop);
+  transition: filter 0.3s ease;
+}
+.desktop-widgets {
+  position: absolute; top: 60px; right: 40px;
+  pointer-events: none;
+}
+.desktop-clock {
+  text-align: right;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+.desktop-clock-time {
+  font-size: 60px; font-weight: 200;
+  letter-spacing: -2px; line-height: 1;
+  color: rgba(255,255,255,0.9);
+}
+.desktop-clock-date {
+  font-size: 18px; font-weight: 400;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+}
+
+.context-menu {
+  position: fixed; z-index: var(--z-modal);
+  min-width: 220px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(40px) saturate(180%);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  padding: 4px;
+  animation: fadeIn 0.12s ease;
+}
+.context-item {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 7px 14px;
+  background: none; border: none;
+  color: var(--text-primary); font-size: 13px;
+  cursor: pointer; border-radius: 6px;
+  transition: var(--transition); text-align: left;
+}
+.context-item:hover { background: var(--accent); }
+.context-divider {
+  height: 1px; margin: 3px 10px;
+  background: rgba(255,255,255,0.08);
+}
+
+@media (max-width: 768px) {
+  .desktop-widgets {
+    display: none;
+  }
+
+  .desktop-clock-time {
+    font-size: 42px;
+    letter-spacing: 0;
+  }
+
+  .desktop-clock-date {
+    font-size: 14px;
+  }
+
+  .context-menu {
+    left: 8px !important;
+    right: 8px;
+    top: auto !important;
+    bottom: calc(74px + env(safe-area-inset-bottom));
+    min-width: 0;
+    width: calc(100vw - 16px);
+    max-width: none;
+    border-radius: 16px;
+    padding: 8px;
+  }
+
+  .context-item {
+    min-height: 48px;
+    font-size: 15px;
+  }
+}

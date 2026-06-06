@@ -1,0 +1,40 @@
+{
+  "name": "os",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "agent": "node agent-server.js",
+    "cloud": "node cloud-server.js",
+    "sync": "node cloud-server.js & node agent-server.js",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview --host"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "express": "^5.2.1",
+    "groq-sdk": "^1.2.0",
+    "lucide-react": "^1.16.0",
+    "mime-types": "^3.0.2",
+    "multer": "^2.1.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-draggable": "^4.5.0",
+    "uuid": "^14.0.0",
+    "ws": "^8.21.0",
+    "xxhash-wasm": "^1.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "vite": "^8.0.12"
+  }
+}

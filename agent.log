@@ -1,0 +1,14 @@
+[SyncEngine] Starting file watchers for 6 folders...
+[SyncEngine] 👁️  Watching: Desktop -> /home/trakshan/Desktop
+[SyncEngine] 👁️  Watching: Documents -> /home/trakshan/Documents
+[SyncEngine] 👁️  Watching: Downloads -> /home/trakshan/Downloads
+[SyncEngine] 👁️  Watching: Pictures -> /home/trakshan/Pictures
+[SyncEngine] 👁️  Watching: Music -> /home/trakshan/Music
+[SyncEngine] 👁️  Watching: Videos -> /home/trakshan/Videos
+🖥️  AuraOS bridge ready at http://127.0.0.1:4777
+✅ Connected to Cloud Server
+[HTTP] OPTIONS /metrics
+[HTTP] GET /metrics
+[Metrics] Gathering hardware info
+[HTTP] GET /metrics
+[Metrics] Gathering hardware info

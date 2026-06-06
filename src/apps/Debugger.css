@@ -1,0 +1,103 @@
+.debugger {
+  display: flex;
+  height: 100%;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.debugger-sidebar {
+  width: 150px;
+  background: #252526;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.debugger-sidebar button {
+  background: none;
+  border: none;
+  color: #969696;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.debugger-sidebar button:hover {
+  background: #2a2d2e;
+  color: #ccc;
+}
+
+.debugger-sidebar button.active {
+  background: #37373d;
+  color: white;
+  border-left: 2px solid #007acc;
+}
+
+.debugger-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.debugger-panel h3 {
+  margin-top: 0;
+  color: #007acc;
+  font-size: 14px;
+}
+
+.debugger-json {
+  background: #000;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 11px;
+  line-height: 1.4;
+  border: 1px solid #333;
+}
+
+.debug-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+  font-size: 13px;
+}
+
+.debug-status {
+  font-weight: bold;
+}
+
+.status-ok { color: #4ec9b0; }
+.status-err { color: #f44747; }
+
+.debug-error {
+  color: #f44747;
+  font-size: 11px;
+  margin-top: 5px;
+  background: rgba(244, 71, 71, 0.1);
+  padding: 8px;
+  border-left: 3px solid #f44747;
+}
+
+.debug-device-list {
+  list-style: none;
+  padding: 0;
+}
+
+.debug-device-list li {
+  padding: 10px;
+  background: #252526;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.debug-device-list li.active {
+  border: 1px solid #007acc;
+  background: rgba(0, 122, 204, 0.1);
+}
+
+.debug-device-list small {
+  color: #666;
+}
