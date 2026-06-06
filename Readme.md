@@ -155,8 +155,6 @@ http://localhost:5173
 git clone -b nexusos-v2 https://github.com/trakshan-mishra/browseros.git && \
 cd browseros && \
 npm install && \
-cp .env.example .env && \
-echo "Add your API keys to .env" && \
 node cloud-server.js
 ```
 
